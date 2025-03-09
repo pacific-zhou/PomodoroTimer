@@ -1,6 +1,6 @@
-# Pomodoro Timer
+# Pomodoro Timer (Vue 3 Version)
 
-A beautiful and functional Pomodoro Timer web application with sound notifications and dynamic Unsplash backgrounds.
+A beautiful and functional Pomodoro Timer web application built with Vue 3, featuring sound notifications and dynamic Unsplash backgrounds.
 
 ## Features
 
@@ -11,6 +11,32 @@ A beautiful and functional Pomodoro Timer web application with sound notificatio
 - **Customizable Settings**: Adjust timer durations, auto-start, and more
 - **Visual Progress**: Circular progress indicator shows remaining time
 - **Local Storage**: Your settings are saved between sessions
+
+## Technologies Used
+
+- Vue 3 (Composition API)
+- Pinia for state management
+- Vite for build tooling
+- CSS3 with modern features
+- Unsplash API for background images
+- Local Storage API
+- Web Audio API
+
+## Project Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
 
 ## How to Use
 
@@ -40,24 +66,31 @@ The application uses Unsplash to fetch beautiful background images. To use your 
 
 1. Register at [Unsplash Developers](https://unsplash.com/developers)
 2. Create a new application to get an API key
-3. Replace `YOUR_UNSPLASH_API_KEY` in the script.js file with your actual API key
+3. Replace `YOUR_UNSPLASH_API_KEY` in the App.vue file with your actual API key
 
 If you don't provide an API key, the application will use a fallback method to fetch random images.
 
-## Installation
+## Project Structure
 
-1. Clone this repository or download the files
-2. Open index.html in your web browser
-3. Optionally, replace the Unsplash API key in script.js
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Unsplash API
-- Local Storage API
-- Web Audio API
+```
+pomodoro-timer-vue/
+├── public/
+├── src/
+│   ├── assets/
+│   │   └── styles.css
+│   ├── components/
+│   │   ├── TimerContainer.vue
+│   │   └── SettingsPanel.vue
+│   ├── stores/
+│   │   ├── timer.js
+│   │   └── settings.js
+│   ├── App.vue
+│   └── main.js
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
 ## License
 

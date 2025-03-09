@@ -3,96 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro Timer</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Pomodoro Timer</title>
 </head>
 <body>
-    <div class="container">
-        <div class="timer-container">
-            <h1>Pomodoro Timer</h1>
-            
-            <div class="timer">
-                <div class="timer-wrapper">
-                    <svg width="300" height="300" viewBox="0 0 300 300">
-                        <circle class="timer-circle-bg" cx="150" cy="150" r="120" />
-                        <circle class="timer-circle-progress" cx="150" cy="150" r="120" />
-                    </svg>
-                    
-                    <div class="time-display">
-                        <span id="minutes">25</span>:<span id="seconds">00</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="timer-controls">
-                <button id="start-btn" class="btn"><i class="fas fa-play"></i> Start</button>
-                <button id="pause-btn" class="btn" disabled><i class="fas fa-pause"></i> Pause</button>
-                <button id="reset-btn" class="btn"><i class="fas fa-redo"></i> Reset</button>
-            </div>
-            
-            <div class="timer-modes">
-                <button id="pomodoro-btn" class="mode-btn active">Pomodoro</button>
-                <button id="short-break-btn" class="mode-btn">Short Break</button>
-                <button id="long-break-btn" class="mode-btn">Long Break</button>
-            </div>
-            
-            <div class="timer-settings">
-                <button id="settings-btn" class="settings-btn"><i class="fas fa-cog"></i></button>
-            </div>
-        </div>
-        
-        <div class="settings-panel" id="settings-panel">
-            <h2>Settings</h2>
-            <div class="setting">
-                <label for="pomodoro-time">Pomodoro Time (minutes):</label>
-                <input type="number" id="pomodoro-time" min="1" max="60" value="25">
-            </div>
-            <div class="setting">
-                <label for="short-break-time">Short Break Time (minutes):</label>
-                <input type="number" id="short-break-time" min="1" max="30" value="5">
-            </div>
-            <div class="setting">
-                <label for="long-break-time">Long Break Time (minutes):</label>
-                <input type="number" id="long-break-time" min="1" max="60" value="15">
-            </div>
-            <div class="setting">
-                <label for="auto-start">Auto-start next timer:</label>
-                <input type="checkbox" id="auto-start">
-            </div>
-            <div class="setting">
-                <label for="sound-enabled">Sound notifications:</label>
-                <input type="checkbox" id="sound-enabled" checked>
-            </div>
-            <div class="setting">
-                <label for="background-change">Change background automatically:</label>
-                <input type="checkbox" id="background-change" checked>
-            </div>
-            <div class="setting" id="background-interval-setting">
-                <label for="background-interval">Background change interval (minutes):</label>
-                <input type="number" id="background-interval" min="1" max="60" value="1">
-            </div>
-            <div class="setting">
-                <label>Change background now:</label>
-                <button id="change-background-btn" class="btn">New Background</button>
-            </div>
-            <button id="save-settings-btn" class="btn">Save Settings</button>
-            <div class="sound-test">
-                <button id="test-sound-btn" class="btn">Test Sounds</button>
-            </div>
-        </div>
-    </div>
-    
-    <div class="background-credit">
-        <span>Photo by <a id="photo-credit" href="#" target="_blank">Unsplash</a></span>
-    </div>
-    
-    <audio id="start-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-bell-notification-933.mp3" preload="auto"></audio>
-    <audio id="end-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
-    
-    <audio id="start-sound-fallback" src="https://soundbible.com/mp3/service-bell_daniel_simion.mp3" preload="auto"></audio>
-    <audio id="end-sound-fallback" src="https://soundbible.com/mp3/analog-watch-alarm_daniel-simion.mp3" preload="auto"></audio>
-    
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
